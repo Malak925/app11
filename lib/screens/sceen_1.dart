@@ -1,5 +1,6 @@
 import 'package:apppagee/main.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
 class My_first_sc extends StatefulWidget {
   const My_first_sc({super.key});
@@ -9,13 +10,16 @@ class My_first_sc extends StatefulWidget {
 }
 
 class _My_first_scState extends State<My_first_sc> {
-  String ChValue = "";
+  String ChValue = "Hi";
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("First screen"),
+        title: Text(
+          "First screen",
+          style: TextStyle(fontFamily: 'Anton-Regular'),
+        ),
       ),
       body: Center(
         child: Column(
@@ -30,29 +34,46 @@ class _My_first_scState extends State<My_first_sc> {
                   ));
                 },
                 icon: Icon(Icons.keyboard_return),
-                label: Text("Return To Main")),
+                label: Text(
+                  "Return To Main",
+                  style: TextStyle(fontFamily: 'Anton-Regular'),
+                )),
             DropdownButton(
                 value: ChValue,
                 items: [
                   DropdownMenuItem(
-                    child: Text("Hello"),
-                    value: "hello",
+                    child: Text(
+                      "Hello",
+                      style: TextStyle(fontFamily: 'Anton-Regular'),
+                    ),
+                    value: "Hello",
                   ),
                   DropdownMenuItem(
-                    child: Text("Bonjor"),
-                    value: 'bonjor',
+                    child: Text(
+                      "Bonjor",
+                      style: TextStyle(fontFamily: 'Anton-Regular'),
+                    ),
+                    value: "Bonjor",
                   ),
                   DropdownMenuItem(
-                    child: Text("Hi"),
-                    value: 'hi',
+                    child: Text(
+                      "Hi",
+                      style: TextStyle(fontFamily: 'Anton-Regular'),
+                    ),
+                    value: "Hi",
                   ),
                   DropdownMenuItem(
-                    child: Text("Mar7aba"),
-                    value: 'mar7aba',
+                    child: Text(
+                      "Mar7aba",
+                      style: TextStyle(fontFamily: 'Anton-Regular'),
+                    ),
+                    value: "Mar7aba",
                   )
                 ],
                 onChanged: (val) {
-                  ChValue = val.toString();
+                  setState(() {
+                    ChValue = val.toString();
+                  });
                 })
           ],
         ),

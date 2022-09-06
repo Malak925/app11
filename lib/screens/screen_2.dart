@@ -1,6 +1,6 @@
 import 'package:apppagee/main.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
+// import 'package:flutter/rendering.dart';
 
 class My_second_sc extends StatefulWidget {
   const My_second_sc({super.key});
@@ -14,7 +14,10 @@ class _My_second_scState extends State<My_second_sc> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Second screen"),
+        title: Text(
+          "Second screen",
+          style: TextStyle(fontFamily: 'LibreBaskerville-Bold'),
+        ),
       ),
       body: Center(
         child: Column(
@@ -29,7 +32,10 @@ class _My_second_scState extends State<My_second_sc> {
                   ));
                 },
                 icon: Icon(Icons.keyboard_return),
-                label: Text("Return To Main")),
+                label: Text(
+                  "Return To Main",
+                  style: TextStyle(fontFamily: 'LibreBaskerville-Bold'),
+                )),
           ],
         ),
       ),

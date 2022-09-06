@@ -28,8 +28,14 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: Drawer(),
       appBar: AppBar(
-        title: Text("Main screen"),
+        title: Text(
+          "Main screen",
+          style: TextStyle(
+              fontFamily: 'DancingScript-VariableFont_wght',
+              fontWeight: FontWeight.bold),
+        ),
       ),
       body: Center(
         child: Column(
@@ -46,7 +52,12 @@ class _HomeState extends State<Home> {
                       });
                     },
                     icon: Icon(Icons.pages),
-                    label: Text("First Screen"))),
+                    label: Text(
+                      "First Screen",
+                      style: TextStyle(
+                          fontFamily: 'DancingScript-VariableFont_wght',
+                          fontWeight: FontWeight.bold),
+                    ))),
             Container(
                 child: ElevatedButton.icon(
                     onPressed: () {
@@ -58,7 +69,12 @@ class _HomeState extends State<Home> {
                       });
                     },
                     icon: Icon(Icons.pages),
-                    label: Text("second Screen"))),
+                    label: Text(
+                      "second Screen",
+                      style: TextStyle(
+                          fontFamily: 'DancingScript-VariableFont_wght',
+                          fontWeight: FontWeight.bold),
+                    ))),
           ],
         ),
       ),
